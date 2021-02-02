@@ -29,8 +29,8 @@ jobs:
     - name: Run codecov.io
       uses: codecov/codecov-action@v1
       with:
-        token: e22ef9b9-8cad-4931-a8b7-45ef908e6760
+        token: ${{ secrets.CODECOV_TOKEN }}
         files: ./jacocoTestReport.xml
-        directory: ./build/reports/jacoco/test/
+        directory: build/reports/jacoco/test/
         fail_ci_if_error: true
         verbose: true
